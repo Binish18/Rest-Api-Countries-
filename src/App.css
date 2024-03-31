@@ -1,0 +1,144 @@
+.dark-theme {
+  --bg-clr : hsl(207, 26%, 17%);
+  --bg-element-clr : hsl(209, 23%, 22%);
+  --text-color: white;
+
+}
+.light-theme {
+  --bg-clr : hsl(0, 0%, 98%);
+  --bg-element-clr : hsl(0, 0%, 100%);
+  --text-color:hsl(200, 15%, 8%);
+
+  
+}
+
+
+body {
+  background-color: var(--bg-clr);
+}
+.navbar{
+  background-color: var(--bg-element-clr)
+}
+.navbar-brand{
+  color: var(--text-color);
+}
+#toggler{
+  color: var(--text-color);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 10px; /* Gap between cards */
+  margin-top: 5rem;
+}
+
+.card {
+  background:var(--bg-element-clr);
+ margin-bottom: 40px;
+color: var(--text-color);
+ text-decoration: none;
+  transition: all 0.3s ease;
+}
+.link{
+  color: var(--text-color);
+  text-decoration: none;
+}
+.link:hover{
+  color: var(--text-color);
+}
+.country-details{
+  color: var(--text-color);
+ 
+}
+.country-details-heading{
+  color: var(--text-color);
+ 
+}
+.button{
+  color: var(--text-color);
+  background-color: var(--bg-element-clr);
+  padding: 10px 20px 10px 20px;
+}
+.button:hover{
+  color: var(--text-color);
+}
+.search{
+  background-color: var(--bg-element-clr);
+  outline: none;
+  border: var(--text-color);
+  width:30%;
+}
+.search::placeholder {
+  color:var(--text-color)/* Change placeholder color to gray (#999), adjust as needed */
+}
+.icon
+{
+  color: var(--text-color);
+}
+.select{
+  position: absolute;
+  right: 10%;
+  top: 17%;
+  padding:10px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--bg-element-clr);
+}
+@media only screen and (max-width: 767px ) {
+ 
+  .card-container {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  
+    margin-top: 8rem;
+  }
+  .select{
+    position: absolute;
+    
+    top: 10rem;
+    left: 0;
+    padding:10px;
+    border: none;
+    color: var(--text-color);
+    background-color: var(--bg-element-clr);
+    width: 50%;
+  }
+  .search{
+    background-color: var(--bg-element-clr);
+    outline: none;
+    border: var(--text-color);
+    width:80%; 
+ 
+  }
+  .country-details-heading{
+    color: var(--text-color);
+    margin-top: 4rem;
+   
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    margin-top: 6rem;
+  }
+  .select{
+    position: absolute;
+    
+    top: 10rem;
+    left: 2rem;
+    padding:10px;
+    border: none;
+    color: var(--text-color);
+    background-color: var(--bg-element-clr);
+    width: 30%;
+  }
+  .search{
+    background-color: var(--bg-element-clr);
+    outline: none;
+    border: var(--text-color);
+    width:100%; 
+ 
+  }
+}
